@@ -1,0 +1,29 @@
+body{
+    background-color: #333333;
+    font-family: 'SohoGothic', sans-serif;
+    height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 50px;
+}
+
+a {
+    -webkit-transition: color 300ms;
+    -o-transition: color 300ms;
+    -moz-transition: color 300ms;
+    -ms-transition: color 300ms;
+    transition: color 300ms;
+    color: #FF4200;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover{
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:focus {
+    outline: 0
+}

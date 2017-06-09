@@ -1,0 +1,222 @@
+/******** navbar ********/
+.navbar-header .navbar-menu{
+    background-image: url(../../image/head/menu-button.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: transparent;
+    color: #231f20;
+    display: block;
+    font-weight: 500;
+    height: 20px;
+    left: 0;
+    letter-spacing: 1px;
+    margin: 15px;
+    overflow: hidden;
+    padding: 15px;
+    position: absolute;
+    text-indent: -999px;
+    border: none;
+    top: 0;
+    width: 20px;
+}
+
+.navbar-header .navbar-brand{
+    color: #777;
+    font-size: 18px;
+    height: 50px;
+    left: 0;
+    line-height: 20px;
+    margin: auto;
+    padding: 4px 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 130px;
+    float: left;
+}
+
+.navbar-header .navbar-model-button{
+    color: #231f20;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 20px;
+    padding: 15px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+#navbar > ul:last-child a{
+    padding: 4px 28px;
+}
+
+/******** navbar-secondary ********/
+
+.navbar-secondary{
+    background: #ffffff;
+    border-bottom: 1px solid #afafaf;
+    font-family: sereneMTC, arial, sans serif;
+    padding: 30px 0;
+    position: fixed;
+    top: -210px;  /* 50px */
+    width: 100%;
+    z-index: 20;
+    text-align: center;
+}
+
+.navbar-secondary .tab-bar{
+    border: 1px solid #888888;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-secondary .tab-bar button{
+    background: #ffffff;
+    cursor: pointer;
+    border: none;
+    border-right: 1px solid #888888;
+    color: #333333;
+    float: left;
+    font-family: 'interFace Bold', Helvetica, Arial, sans-serif;
+    font-size: 10px;
+    line-height: 27px;
+    margin: 0;
+    padding: 1px 8px;
+    text-align: center;
+}
+
+.navbar-secondary .tab-bar button.active{
+    background: #ff4000;
+    border-right: 1px solid #ff4000;
+    color: #ffffff;
+}
+
+.navbar-secondary .tab-bar button:hover {
+    background: rgba(255, 64, 0, 1);
+    color: #ffffff;
+}
+
+.navbar-secondary .tab-bar button:first-child {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.navbar-secondary .tab-bar button:last-child{
+    border-bottom-right-radius: 4px;
+    border-right: none;
+    border-top-right-radius: 4px;
+}
+
+.navbar-secondary .vehicle-navigation-options{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.navbar-secondary .vehicle-navigation-options .active {
+    opacity: 1;
+}
+
+.navbar-secondary .vehicle-navigation-options a {
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.navbar-secondary .vehicle-navigation-options a:hover {
+    color: #ffffff;
+}
+
+.navbar-secondary .slick{
+    width: 555px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.navbar-secondary .slick img{
+    width: 185px;
+    cursor: pointer;
+}
+
+.navbar-secondary .grid_expolre img{
+    height: 58px;
+    cursor: pointer;
+}
+
+.navbar-secondary .grid_expolre{
+    position: absolute;
+    top: 67px;
+    right: 0;
+    left: 0;
+    background-color: #ffffff;
+}
+
+.navbar-secondary .expolre_content{
+    width: 80%;
+    margin: 20px auto;
+}
+
+/******** wrapper ********/
+#wrapper{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: scroll;
+}
+
+#wrapper .sidenav{
+    background: #333333;
+    font-size: 14px;
+    font-weight: 200;
+    height: 100%;
+    left: -210px;
+    letter-spacing: 1px;
+    position: fixed;
+    top: 50px;
+    width: 210px;
+    z-index: 10;
+}
+
+#wrapper .sidenav ul.sidenav-header{
+    border-bottom: 1px solid #404040;
+    list-style: none;
+    margin-bottom: 0px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 145px;
+}
+
+#wrapper .sidenav ul.sidenav-header li{
+    padding: 5px 15px 5px 0;
+    text-align: right;
+}
+
+#wrapper .sidenav ul.sidenav-header li a{
+    color: white;
+    cursor: pointer;
+    font-family: 'SohoGothic', sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 1px;
+}
+
+#wrapper .sidenav .copyright{
+    color: #666666;
+    padding: 5px 62px 5px 0;
+    text-align: right;
+}
+
+#wrapper .content{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}

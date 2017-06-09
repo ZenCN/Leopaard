@@ -1,0 +1,70 @@
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="navbar-header">
+        <button class="navbar-menu visible-xs" toggle-navigation selector=".sidenav" px_open="0" px_close="-210" direction="left" recover=".content">Menu</button>
+        <a class="navbar-brand visible-xs" href="#">
+            <img src="image/head/logo.gif" alt="猎豹汽车" title="猎豹汽车">
+        </a>
+        <a class="navbar-model-button visible-xs" toggle-navigation selector=".navbar-secondary" px_open="50" px_close="-312" direction="top">  <!-- directive: toggle_navigation.js -->
+            车型
+        </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+            <li><a>关于我们</a></li>
+            <li><a toggle-navigation selector=".navbar-secondary" px_open="50" px_close="-312" direction="top">车型一览</a></li>  <!-- directive: toggle_navigation.js -->
+            <li><a>购车支持</a></li>
+            <li><a>爱车服务</a></li>
+            <li><a>资讯动态</a></li>
+            <li><a>车友俱乐部</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a href="#"><img src="image/head/logo.gif" alt="猎豹汽车" title="猎豹汽车"></a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="navbar-secondary">
+    <div class="tab-bar">
+        <button ng-class="{active:cars.models.selected == 'all'}" ng-click="cars.models.select('all')">所有</button>
+        <button ng-class="{active:cars.models.selected == 'suv'}" ng-click="cars.models.select('suv')">SUV</button>
+        <button ng-class="{active:cars.models.selected == 'pick_up'}" ng-click="cars.models.select('pick_up')">皮卡</button>
+    </div>
+    <div class="vehicle-navigation-options hidden-xs">
+        <a ng-class="{active:cars.models.expolre_type == 'one'}" ng-click="cars.models.expolre_type = 'one'">
+            <img src="image/head/vehicle-navigation-options-slider.png" width="42" height="43" alt="滑动浏览">
+        </a>
+        <a ng-class="{active:cars.models.expolre_type == 'grid'}" ng-click="cars.models.expolre_type = 'grid'">
+            <img src="image/head/vehicle-navigation-options-grid.png" width="42" height="43" alt="列表浏览">
+        </a>
+    </div>
+    <div class="slick" ng-slick></div>  <!-- directive: ng_slick.js -->
+    <div class="grid_expolre hidden-xs" ng-show="cars.models.expolre_type == 'grid'">
+        <div class="expolre_content">
+            <div ng-repeat="car in cars.models[cars.models.selected]" class="col-xs-4 col-md-3 col-lg-2">
+                <img ng-src="{{car.img_url}}"/>
+                <p>{{car.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="wrapper" ng-scrollbar>
+    <nav class="sidenav visible-xs" role="navigation">
+        <header>
+            <ul class="sidenav-header">
+                <li><a>关于我们</a></li>
+                <li><a>购车支持</a></li>
+                <li><a>爱车服务</a></li>
+                <li><a>资讯动态</a></li>
+                <li><a>车友俱乐部</a></li>
+            </ul>
+        </header>
+        <footer>
+            <ul class="sidenav-footer"></ul>
+            <p class="copyright">© 2017 leopaard</p>
+        </footer>
+    </nav>
+    <div class="content" toggle-navigation params="[{s:'.sidenav',connected:true,px_close:-210,d:'left'},{s:'.navbar-secondary',px_close:-312,d:'top'}]" ui-view>
+
+    </div>
+</div>
